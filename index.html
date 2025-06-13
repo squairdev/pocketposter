@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pocket Poster Tutorial</title>
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://squair.is-a.dev/pocketposter/images/LogoClipped.png">
+  <link href="styles/root.css" rel="stylesheet">
+  <meta content="Pocket Poster Tutorial" property="og:title">
+  <meta content="A easy guide on how to install Pocket Poster on your iOS or iPadOS device." property="og:description">
+  <meta content="https://squair.is-a.dev/pocketposter" property="og:url">
+  <meta content="https://squair.is-a.dev/pocketposter/images/Logo.png" property="og:image">
+</head>
+<body>
+  <h1><img src="images/Logo.png" style="border-radius: 10px; width: 80px;"/><br>Pocket Poster Tutorial</h1>
+  <h1 style="font-size: 1rem;margin-bottom: 2rem; color:darkgrey">A easy guide on how to install Pocket Poster on your iOS or iPadOS device.</h1>
+
+  <details class="dropdown" id="account">
+    <summary>Getting a free Apple Developer account</summary>
+    <div class="dropdown-content">
+        <p>Head to the <a href="https://developer.apple.com/" target="_blank">Apple Developer</a> website, and make a free account by clicking "Account" on the navbar or dropdown.
+        <br><br>You'll need to agree to apple's terms and conditions to create an Apple Developer account.
+        <br><br>Next, on your device, go to <code>Settings > Privacy and Security > Developer Mode</code> and enable it. Your device will restart.</p>
+        <img src="images/AppleDeveloper.png"/>
+    </div>
+  </details>
+  
+  <details class="dropdown" id="altserver">
+    <summary>Getting AltServer</summary>
+    <div class="dropdown-content">
+      <p>You can get AltStore by going <a href="https://cdn.altstore.io/file/altstore/altinstaller.zip" target="_blank">here</a>, and unzip your '.zip' file.
+      <br><br>You'll next need to open the unzipped folder and running "AltInstaller.msi". Proceed with the setup as usual. You may need to click the 'Windows Defender' icon to show the popup.
+      <br><br>Next, click the <code>windows</code> key, and search for "AltServer". Run it. No menu will popup, but the application will start.
+      </p>
+      <img src="images/AltInstaller.png" alt="Setup Screenshot">
+    </div>
+  </details>
+
+  <details class="dropdown" id="altstore">
+    <summary>Installing AltStore on your device</summary>
+    <div class="dropdown-content">
+      <p>Open <a href="https://apps.microsoft.com/detail/9np83lwlpz9k?hl=en-US&gl=CA" target="_blank">Apple Devices</a>. Next, open your "Hidden Icons" on your taskbar. You will see a icon that resembles a star.
+      <br><br>Next, Click on that icon, hover over "Install AltStore", and click on your device (see photo). You will be prompted to enter your apple ID (Don't worry, it's safe. I've done it many times). AltStore will be installed on your device.
+      <br><br>Finally, go to <code>Settings > General > VPN and Device Management > Developer App</code> and trust AltStore. You may also have to do this when you get Pocket Poster.
+    </p>
+      <img src="images/Taskbar.png" alt="Import Screenshot">
+    </div>
+  </details>
+
+  <details class="dropdown" id="ipa">
+    <summary>Downloading the IPA file</summary>
+    <div class="dropdown-content">
+        <p>On your device, download <a href="https://github.com/leminlimez/Pocket-Poster/releases/latest/download/Pocket_Poster.ipa">the latest release of Pocket Poster</a> and open the AltStore app. Head over to the "My Apps" section and click the "+" icon. Select your Pocket Poster <code>.ipa</code> file.
+        <br><br>If your phone is connected to your pc and AltServer is running, Pocket Poster will be Sideloaded.</p>
+        <img src="images/AltStore.png"/>
+    </div>
+  </details>
+
+  <details class="dropdown" id="use">
+    <summary>Configuring and using Pocket Poster</summary>
+    <div class="dropdown-content">
+        <p>Once you have completed the tutorial inside the app, open Nugget on your pc (see <a href="https://squair.is-a.dev/nugget-docs/?os=windows" target="_blank">how to install Nugget on Windows</a>) and navigate to the Settings tab. Click on "Pocket Poster Helper". Now, on your device, click on the gear icon and click "detect" under App Hash. This will enter your app hash, which is required (if detecting it doesn't work, type it in manually).
+        <br><br>Now, you are free to import any <code>.tendies</code> file that you like! Remember to follow the popup's instructions, and if you get errors, refer to the <a href="https://discord.gg/cowabunga" target="_blank">Cowabunga Discord server</a>.
+        </p>
+        <img src="images/NuggetHelp.png"/>
+        <img src="images/appSettings.png"/>
+    </div>
+  </details>
+  <!--SCRIPTS AND SHIT-->
+
+  <!-- Modal Structure -->
+<div id="image-modal">
+  <span id="image-modal-close" onclick="closeImageModal()">×</span>
+  <img id="image-modal-img" src="" alt="Enlarged Image">
+</div>
+<footer style="text-align: center;">
+    <p>✨Made by <a style="text-shadow: 0 0 10px #1d8aff;" href="https://squair.is-a.dev/" target="_blank">Squair</a> (Glixed).✨
+    <br> Join the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://discord.gg/cowabunga/" target="_blank">Discord server</a>.
+    <br> Visit the <a style="text-shadow: 0 0 10px #1d8aff;" href="https://github.com/squairdev/pocketposter" target="_blank">Github Repo</a>.</p>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".dropdown-content img");
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("image-modal-img");
+
+    images.forEach(img => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        document.body.style.overflow = "hidden"; // disable background scroll
+      });
+    });
+
+    // Close modal on background click
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeImageModal();
+    });
+  });
+
+  function closeImageModal() {
+    const modal = document.getElementById("image-modal");
+    modal.style.display = "none";
+    document.body.style.overflow = ""; // re-enable scroll
+  }
+</script>
+<!--LINES-->
+<div id="line-background"></div>
+<script>
+const container = document.getElementById('line-background');
+
+function createLine() {
+    const line = document.createElement('div');
+    line.classList.add('line');
+
+    const y = Math.random() * window.innerHeight;
+    const width = 100 + Math.random() * 400;
+    const duration = 3 + Math.random() * 3;
+
+    line.style.top = `${y}px`;
+    line.style.width = `${width}px`;
+    line.style.animationDuration = `${duration}s`;
+
+    container.appendChild(line);
+
+    setTimeout(() => line.remove(), duration * 1000);
+}
+
+setInterval(createLine, 150);
+</script>
+<!--TAGS-->
+<script>
+  function openSectionFromHash() {
+    const hash = window.location.hash.substring(1); // Remove the '#'
+    if (!hash) return;
+
+    const validIds = ['account', 'altserver', 'altstore', 'ipa', 'use'];
+    if (!validIds.includes(hash)) return;
+
+    const target = document.getElementById(hash);
+    if (target && target.tagName.toLowerCase() === 'details') {
+      target.open = true;
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', openSectionFromHash);
+  window.addEventListener('hashchange', openSectionFromHash);
+</script>
+
+</body>
+</html>
