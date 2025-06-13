@@ -1,5 +1,5 @@
 :root {
-    --bg: #121212;
+    --bg: #000000;
     --surface: #1e1e1e;
     --accent: #3f8cff;
     --text: #f0f0f0;
@@ -147,4 +147,26 @@ a {
     100% {
     transform: translateX(200vw);
     }
+}
+.dropdown summary {
+  position: relative;
+  padding-left: 2rem; /* space for arrow */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown summary .arrow {
+  content: '';
+  display: inline-block;
+  border: solid var(--text);
+  border-width: 0 2px 2px 0;
+  padding: 6px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.dropdown[open] summary .arrow {
+  transform: rotate(45deg);
 }
