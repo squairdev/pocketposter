@@ -7,6 +7,11 @@
     --border-radius: 1rem;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +56,18 @@ h1 {
     padding: 1.5rem;
     flex-wrap: wrap;
 }
+
+.dropdown-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
 
 .dropdown p {
     color: var(--text-muted);
@@ -169,4 +186,13 @@ a {
 
 .dropdown[open] summary .arrow {
   transform: rotate(45deg);
+}
+footer > p{
+  display: inline-block;
+  background: rgba(145, 145, 145, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  width: fit-content; 
+  padding: 1rem;
+  border-radius: 16px;
 }
