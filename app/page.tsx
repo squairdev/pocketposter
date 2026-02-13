@@ -8,7 +8,7 @@ import { ReactLenis} from 'lenis/react'
 
 export default function Home() {
   return (
-    <section className="relative h-[100vh]"><ReactLenis root>
+    <section className="relative h-[100vh]"><ReactLenis root options={{ lerp: 0.05, duration: 2 }}>
       <div style={{ width: '100%', height: '100%', position: 'fixed', overflow: 'auto', zIndex: -1 }}>
         <DotGrid
           baseColor="#222222"
