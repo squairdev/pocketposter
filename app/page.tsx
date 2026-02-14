@@ -183,6 +183,7 @@ export default function Home() {
         </div>
         <AnimatedContent direction="vertical" distance={0} delay={1} scale={0.8}> 
           <p className='pt-10 text-center'>Made with <span className='text-red-400 text-shadow-md/30 text-shadow-red-300'>&lt;3</span> by <a href="https://squair.xyz" className='text-sky-300'>Squair</a></p>
+          <p className='text-sm text-center'>View the <a href="https://github.com/squairdev/pocketposter" className='text-sky-300'>GitHub Repository</a></p>
           <p className='text-sm text-center'>SquairCode, 2026. All rights reserved.</p>
         </AnimatedContent>
       </section>
