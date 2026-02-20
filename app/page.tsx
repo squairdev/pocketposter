@@ -43,7 +43,7 @@ export default function Home() {
           <FadeContent blur delay={0.4} duration={0.7} className='bg-[#1c398e]/25 backdrop-blur-[1.8px] w-full p-5 rounded-t-3xl border-[#1c398e]/25 border-4 border-solid'>
             <FadeContent blur delay={0.5} duration={0.7} className='pb-5 text-2xl font-bold'>Step 1: Creating a free Apple Developer account</FadeContent>
             <FadeContent blur delay={0.5} duration={0.7} className='text-xl'>
-            <p>You need to create a Apple Developer account. Don't worry, this is completley free. You can sign up by going to <a href="https://developer.apple.com/account/" className='text-sky-300' target='_blank'>developer.apple.com</a> and signing in with your existing Apple account.</p>
+            <p>You need to create an Apple Developer account. Don't worry, this is completley free. You can sign up by going to <a href="https://developer.apple.com/account/" className='text-sky-300' target='_blank'>developer.apple.com</a> and signing in with your existing Apple account.</p>
             </FadeContent>
           </FadeContent>
         </div>
