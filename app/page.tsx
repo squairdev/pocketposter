@@ -30,7 +30,7 @@ export default function Home() {
           <AnimatedContent direction="horizontal" distance={50} delay={0.3} scale={0.7}>
             <svg className='absolute' style={{transform: "translate(-100%, -100%)"}} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M460-160v-300H160v-40h300v-300h40v300h300v40H500v300h-40Z"/></svg>
           </AnimatedContent>
-          <FadeContent blur delay={0.6} duration={0.76}>{"A simple enough guide on how to install Pocket Poster on any iOS device. Pocket Poster only supports iOS 17-26.1."}</FadeContent>
+          <FadeContent blur delay={0.6} duration={0.76}>{"A simple enough guide on how to install Pocket Poster on any iOS device. Pocket Poster only supports iOS 17-18.7.2 and 26.0-26.2 beta 1."}</FadeContent>
             <div style={{flexGrow:"1"}}/>
             <AnimatedContent reverse direction="horizontal" distance={50} delay={0.3} scale={0.7}>
               <svg style={{transform: "translate(50%, -0%)", marginLeft: 'auto'}} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M460-160v-300H160v-40h300v-300h40v300h300v40H500v300h-40Z"/></svg>
@@ -168,7 +168,7 @@ export default function Home() {
             <FadeContent blur delay={0.6} duration={0.7} className='pb-5 text-2xl font-bold'>"The folder is improperly set up."</FadeContent>
             <FadeContent blur delay={0.7} duration={0.7} className='text-xl'>
             <p>The primary cause to this is if you're on iOS 26.2 or up. Pocket Poster is patched on 26.2, meaning you can't use Pocket Poster. Use Nugget or PosterChef instead.</p>
-            <p className="pt-2">If you're on iOS 17 - 26.1, tap "reset collections" and it should fix itself.</p>
+            <p className="pt-2">If you're on iOS 17 - 18.7.2 or 26.0 - 26.2 beta 1, tap "reset collections" and it should fix itself.</p>
             </FadeContent>
           </FadeContent>
         </div>
