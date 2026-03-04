@@ -1,6 +1,6 @@
 ## <h1 align="center">`Pocket Poster Guide`</h1>
 
-An easy enough guide on how to install and use Pocket Poster on iOS 17-26.1.
+An easy enough guide on how to install and use Pocket Poster on iOS 17-18.7.2 and 26.0-26.2 beta 1.
 
 > [!WARNING]
 >
