@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://pocketposter.squair.xyz'),
   openGraph: {
     title: 'Pocket Poster Guide',
-    description: 'A simple enough guide on how to install Pocket Poster on any iOS device. Pocket Poster only supports iOS 17-26.1.',
+    description: 'A simple enough guide on how to install Pocket Poster on any iOS device. Pocket Poster only supports iOS 17-18.7.2 and 26.0-26.2 beta 1.',
     images: [
       {
         url: '/opengraph-image.png',
